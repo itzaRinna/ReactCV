@@ -1,0 +1,185 @@
+@import url(./arc_reactor.css);
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.start {
+  height: 90vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #f6f6f6;
+}
+.start .main-container {
+  display: flex;
+}
+.start .herotxt {
+  margin-left: -35rem;
+  /* The typing effect */
+}
+.start .herotxt .slide h1 {
+  text-align: left;
+  font-weight: bolder;
+  font-size: 6rem;
+  font-family: "Major Mono Display", monospace;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: 0.15em solid transparent; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: 0.1em; /* Adjust as needed */
+  animation: typing 3s;
+}
+.start .herotxt h1.gradient-text {
+  background: linear-gradient(2deg, #00ff93, #c850c0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+  40%, 60% {
+    left: calc(100% + 30px);
+  }
+  100% {
+    left: 0;
+  }
+}
+.start .herotxt h2 {
+  font-weight: 800;
+  font-size: 3.6rem;
+  font-family: "Montserrat Alternates", monospace;
+}
+.start .herotxt h2 span::after {
+  content: "";
+  background: linear-gradient(-45deg, #c850c0, #4b00b2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: change-text 9s ease-in-out 0s infinite;
+}
+@keyframes change-text {
+  0% {
+    content: "Webs";
+  }
+  25% {
+    content: "A.I.";
+  }
+  50% {
+    content: "Webs";
+  }
+  75% {
+    content: "A.I.";
+  }
+  100% {
+    content: "Webs";
+  }
+}
+.start .scroll a {
+  position: relative;
+  align-self: flex-end;
+  text-decoration: none;
+  bottom: 0;
+  left: 0;
+  transition: all 0.3s ease-in-out;
+}
+.start .scroll a:hover {
+  bottom: 18px;
+  left: 18px;
+}
+.start .scroll button {
+  background-color: transparent;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+}
+.start .scroll button i {
+  color: #c850c0;
+}
+
+.title h2 {
+  font-family: "Montserrat Alternates", sans-serif;
+  color: #edf5e1;
+  font-size: 75px;
+  width: 71.5rem;
+  margin: 30px auto;
+  text-align: center;
+}
+
+.title h2.gradient-text {
+  background: linear-gradient(180deg, #00ffcc, #f6f6f6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.outer-heropic-container {
+  width: 37rem;
+  height: 37rem;
+  border-radius: 2rem;
+  border-color: #00ffcc;
+  background: rgba(0, 0, 0, 0.22);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(0px);
+  -webkit-backdrop-filter: blur(0px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.outer-heropic-container img {
+  width: 37rem;
+  height: auto;
+  float: left;
+  margin-right: -10rem;
+  margin-left: 0rem;
+  margin-top: -14.5rem;
+  margin-bottom: -10rem;
+}
+
+.inner-heropic-container {
+  width: 15rem;
+  height: 15rem;
+  margin: 8.5rem auto;
+}

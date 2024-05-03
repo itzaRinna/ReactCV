@@ -2,8 +2,6 @@ import React, { useEffect } from 'react';
 import hand from './assets/media-assets/robothand.png'; // Import the hand image
 import cls from './assets/media-assets/close.png';
 import deco from './assets/media-assets/deco.png';
-import Script1 from './Script1.jsx'; // Import the Script1 component
-import Script2 from './Script2.jsx'; // Import the Script2 component
 import './App.css';
 
 function App() {
@@ -13,6 +11,14 @@ function App() {
     // They will be automatically invoked when the component mounts
   }, []);
 
+  const openNav = () => {
+    document.getElementById("mySidenav").style.width = "100%";
+  };
+
+  const closeNav = () => {
+    document.getElementById("mySidenav").style.width = "0";
+  };
+
   return (
     <>
       <section className="start">
@@ -20,10 +26,10 @@ function App() {
         <nav id="mySidenav" className="sidenav">
           {/* Close button */}
           
-          {/* <a href="#" className="closebtn" onClick={Script2.closeNav}>
-            <img src={cls} alt="close menu" /> {/* Use the imported image directly 
+          <a href="#" className="closebtn" onClick={closeNav}>
+            <img src={cls} alt="close menu" />
           </a> 
-          */}
+         
           
           <div className="align-row">
             {/* Navigation links */}
@@ -36,18 +42,18 @@ function App() {
             </div>
             {/* Decoration */}
             
-            {/* <div className="decoration-wrapper">
+            <div className="decoration-wrapper">
               <div className="eye">
                 <img src={deco} alt="decoration" />
               </div>
             </div> 
-            */}
+           
             
           </div>
         </nav>
 
         {/* Logo */}
-        <div className="logo" onClick={Script1.openNav}>
+        <div className="logo" onClick={openNav}>
           <div className="trap" id="trap1"></div>
           <div className="trap" id="trap2"></div>
           <div className="trap" id="trap3"></div>
@@ -63,9 +69,9 @@ function App() {
               <h2 className="read-me"><span></span> Developer</h2>
               <p>
                 <a href="#body">
-                  <button onClick={Script1.playAudio} type="button">
+                  {/* <button onClick={playAudio} type="button">
                     <i><iconify-icon icon="bi:heart-fill" width="50" height="50" rotate="45deg" /></i>
-                  </button>
+                  </button> */}
                 </a>
               </p>
             </div>

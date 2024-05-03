@@ -44,8 +44,6 @@
 }
 
 .start {
-  height: 90vh;
-  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -54,6 +52,9 @@
 }
 .start .main-container {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
 }
 .start .herotxt {
   margin-left: 5rem;

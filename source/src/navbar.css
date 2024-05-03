@@ -1,0 +1,120 @@
+.section {
+    display: grid;
+    place-items: center;
+    align-content: center;
+    min-height: 100vh;
+  }
+  
+  .trap {
+    position: relative;
+    display: block;
+    width: 100px;
+    border-bottom: double 24px #00ffcc;
+    border-left: solid 15px rgba(255, 0, 0, 0);
+    border-right: solid 15px rgba(255, 0, 0, 0);
+  }
+  
+  .logo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 200px;
+    width: 200px;
+    color: #05386b;
+    cursor: pointer;
+  }
+  .logo div {
+    transition: all 0.15s ease-in-out;
+  }
+  
+  .logonavbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100px;
+    width: 100px;
+    cursor: pointer;
+  }
+  .logonavbar div {
+    transition: all 0.1s ease-in-out;
+  }
+  
+  .logo:hover div:nth-child(1) {
+    transform: translate(-10px, -16px);
+  }
+  
+  .logo:hover div:nth-child(2) {
+    transform: translate(-20px, -10px);
+  }
+  
+  .logo:hover div:nth-child(3) {
+    transform: translate(-10px, -3px);
+  }
+  
+  #trap1 {
+    top: 120px;
+    left: 46px;
+    rotate: 25deg;
+  }
+  
+  #trap2 {
+    top: 45px;
+    left: 51px;
+    rotate: 145deg;
+  }
+  
+  #trap3 {
+    top: 50px;
+    left: 92px;
+    rotate: 265deg;
+  }
+  
+  .sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    border-radius: 2rem;
+    background-color: #170025;
+    overflow-x: hidden;
+    transition: 0.5s;
+  }
+  
+  .sidenav .closebtn img {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+  
+  .sidenav .nav-wrapper {
+    width: -moz-fit-content;
+    width: fit-content;
+    padding-top: 70px;
+    padding-left: 70px;
+  }
+  
+  .sidenav a {
+    padding: 8px;
+    text-decoration: none;
+    font-family: "Montserrat Alternates", sans-serif;
+    font-size: 8.5rem;
+    -webkit-text-stroke: 0.5px #edf5e1;
+    color: transparent;
+    display: flex;
+    transition: 0.5s;
+    margin: auto;
+  }
+  
+  .sidenav a:hover {
+    color: #00ffbf;
+  }
+  
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  

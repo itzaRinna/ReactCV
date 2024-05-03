@@ -1,4 +1,5 @@
 @import url(./arc_reactor.css);
+@import url(./navbar.css);
 #root {
   max-width: 1280px;
   margin: 0 auto;

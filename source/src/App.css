@@ -55,7 +55,7 @@
   display: flex;
 }
 .start .herotxt {
-  margin-left: -35rem;
+  margin-left: 5rem;
   /* The typing effect */
 }
 .start .herotxt .slide h1 {
@@ -157,8 +157,8 @@
 }
 
 .outer-heropic-container {
-  width: 37rem;
-  height: 37rem;
+  width: 45rem;
+  height: 40rem;
   border-radius: 2rem;
   border-color: #00ffcc;
   background: rgba(0, 0, 0, 0.22);
@@ -169,7 +169,7 @@
 }
 
 .outer-heropic-container img {
-  width: 37rem;
+  width: 45rem;
   height: auto;
   float: left;
   margin-right: -10rem;

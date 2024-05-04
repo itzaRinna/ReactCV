@@ -1,9 +1,16 @@
 import React, { useEffect, useRef } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { fab } from '@fortawesome/free-brands-svg-icons';
+import { fas } from '@fortawesome/free-solid-svg-icons';
+import { far } from '@fortawesome/free-regular-svg-icons';
 import hand from './assets/media-assets/robothand.png'; // Import the hand image
 import cls from './assets/media-assets/close.png';
 import deco from './assets/media-assets/deco.png';
 import track from './assets/media-assets/soundtracks/main.mp3'
 import './App.css';
+
+library.add(fab, fas, far);
 
 function App() {
   // Set up event listeners and functionality using useEffect
@@ -98,53 +105,108 @@ function App() {
         </div>
       </section>
       <section className="body">
-        <div className="title">
-          <h2 className='gradient-text'>Services</h2>
+        <div className='services'>
+          <div className="title">
+            <h2 className='gradient-text'>Services</h2>
+          </div>
+          <div className="wrapper">
+            <div className="box">
+              <div className="front-face">
+                <div className="icon">
+                  <i className="fas fa-code"></i>
+                </div>
+                <span>Web Dev</span>
+              </div>
+              <div className="back-face">
+                <span>Web Dev</span>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem in deleniti vitae beatae veritatis aliquid porro perspiciatis dolores impedit ad.
+                </p>
+              </div>
+            </div>
+            <div className="box">
+              <div className="front-face">
+                <div className="icon">
+                  <i className="fas fa-chart-line"></i>
+                </div>
+                <span>Software</span>
+              </div>
+              <div className="back-face">
+                <span>Software</span>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem in deleniti vitae beatae veritatis aliquid porro perspiciatis dolores impedit ad.
+                </p>
+              </div>
+            </div>
+            <div className="box">
+              <div className="front-face">
+                <div className="icon">
+                  <i className="fas fa-rocket"></i>
+                </div>
+                <span>Game Dev</span>
+              </div>
+              <div className="back-face">
+                <span>Game Dev</span>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem in deleniti vitae beatae veritatis aliquid porro perspiciatis dolores impedit ad.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
-        <div className="wrapper">
-          <div className="box">
-            <div className="front-face">
-              <div className="icon">
-                <i className="fas fa-code"></i>
-              </div>
-              <span>Web Dev</span>
-            </div>
-            <div className="back-face">
-              <span>Web Dev</span>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem in deleniti vitae beatae veritatis aliquid porro perspiciatis dolores impedit ad.
-              </p>
-            </div>
+        <div class="skills">
+          <div class="title">
+            <h2 class="gradient-text">Skills</h2>
           </div>
-          <div className="box">
-            <div className="front-face">
-              <div className="icon">
-                <i className="fas fa-chart-line"></i>
+          <div class="skill-bars">
+            <div class="bar">
+              <div class="info">
+                <i class="fab fa-html5"></i> 
+                <span>HTML</span>
               </div>
-              <span>Software</span>
-            </div>
-            <div className="back-face">
-              <span>Software</span>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem in deleniti vitae beatae veritatis aliquid porro perspiciatis dolores impedit ad.
-              </p>
-            </div>
-          </div>
-          <div className="box">
-            <div className="front-face">
-              <div className="icon">
-                <i className="fas fa-rocket"></i>
+              <div class="progress-line html">
+                <span></span>
               </div>
-              <span>Game Dev</span>
             </div>
-            <div className="back-face">
-              <span>Game Dev</span>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem in deleniti vitae beatae veritatis aliquid porro perspiciatis dolores impedit ad.
-              </p>
+            <div class="bar">
+              <div class="info">
+                <i class="fab fa-css3-alt"></i> 
+                <span>CSS</span>
+              </div>
+              <div class="progress-line css">
+                <span></span>
+              </div>
+            </div>
+            <div class="bar">
+              <div class="info">
+                <i class="fab fa-js"></i> 
+                <span>jQuery</span>
+              </div>
+              <div class="progress-line jquery">
+                <span></span>
+              </div>
+            </div>
+            <div class="bar">
+              <div class="info">
+                <i class="fab fa-python"></i> 
+                <span>Python</span>
+              </div>
+              <div class="progress-line python">
+                <span></span>
+              </div>
+            </div>
+            <div class="bar">
+              <div class="info">
+                <i class="fas fa-database"></i> 
+                <span>MySQL</span>
+              </div>
+              <div class="progress-line mysql">
+                <span></span>
+              </div>
             </div>
           </div>
         </div>
+
       </section>
     </>
   );

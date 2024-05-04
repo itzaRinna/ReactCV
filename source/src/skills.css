@@ -1,0 +1,132 @@
+.skill-bars {
+    padding: 60px;
+    width: 60rem;
+    border-radius: 25px;
+    background: linear-gradient(120deg, #111111, #0f0f0f);
+    box-shadow: 5px 5px 2px #0b0b0b, -5px -5px 2px #252525;
+    margin: auto;
+    overflow: hidden; /* Ensure content stays within skill bars */
+}
+
+.skill-bars .bar {
+    margin: 20px 0;
+    position: relative;
+}
+
+.skill-bars .bar:first-child {
+    margin-top: 0;
+}
+
+.skill-bars .bar .info {
+    margin-bottom: 5px;
+}
+
+.skill-bars .bar .info span {
+    color: #00ffcc;
+    font-family: "Montserrat Alternates", monospace;
+    font-weight: bold;
+    font-size: 18px;
+    opacity: 0;
+    animation: showText 0.5s 1s linear forwards;
+}
+
+@keyframes showText {
+    100% {
+        opacity: 1;
+    }
+}
+
+.skill-bars .bar .progress-line {
+    height: 10px;
+    width: 100%;
+    background: #f0f0f0;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden; /* Ensure gradient stays within progress bar */
+}
+
+.bar .progress-line span {
+    height: 100%;
+    position: absolute;
+    border-radius: 10px;
+    background: linear-gradient(to right, #0fd850, #f9f871);
+    left: 0; /* Ensure the progress bar starts from the left */
+    top: 0;
+}
+
+.bar .progress-line.html span {
+    width: 90%;
+}
+
+.bar .progress-line.css span {
+    width: 50%;
+}
+
+.bar .progress-line.jquery span {
+    width: 20%;
+}
+
+.bar .progress-line.python span {
+    width: 70%;
+}
+
+.bar .progress-line.mysql span {
+    width: 25%;
+}
+
+.progress-line span::before,
+.progress-line span::after {
+    position: absolute;
+    opacity: 0;
+}
+
+.progress-line span::before {
+    content: "";
+    top: -10px;
+    right: 0;
+    height: 0;
+    width: 0;
+    border: 7px solid transparent;
+    border-bottom-width: 0px;
+    border-right-width: 0px;
+    border-top-color: #000;
+    animation: showText2 0.5s 1.5s linear forwards;
+}
+
+.progress-line span::after {
+    top: -28px;
+    right: 0;
+    font-weight: 500;
+    background: #000;
+    color: #fff;
+    padding: 1px 8px;
+    font-size: 12px;
+    border-radius: 3px;
+    opacity: 1;
+}
+
+@keyframes showText2 {
+    100% {
+        opacity: 1;
+    }
+}
+
+.progress-line.html span::after {
+    content: "90%";
+}
+
+.progress-line.css span::after {
+    content: "60%";
+}
+
+.progress-line.jquery span::after {
+    content: "85%";
+}
+
+.progress-line.python span::after {
+    content: "50%";
+}
+
+.progress-line.mysql span::after {
+    content: "75%";
+}

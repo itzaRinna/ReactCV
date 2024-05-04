@@ -1,6 +1,7 @@
 @import url(./arc_reactor.css);
 @import url(./navbar.css);
-@import url(./boxes.css);
+@import url(./services.css);
+@import url(./skills.css);
 @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css);
 #root {
   max-width: 1280px;
@@ -114,13 +115,13 @@ body{
     content: "Webs";
   }
   25% {
-    content: "A.I.";
+    content: ".Net";
   }
   50% {
     content: "Webs";
   }
   75% {
-    content: "A.I.";
+    content: ".Net";
   }
   100% {
     content: "Webs";

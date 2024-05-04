@@ -1,0 +1,98 @@
+.services {
+    width: 100%;
+    padding: 100px 0px;
+}
+  
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 350px;
+}
+.wrapper {
+  display: grid;
+  margin: auto;
+  grid-gap: 50px;
+  grid-template-columns: repeat(auto-fit, minmax(35px, 1fr));
+}
+
+@media (max-width: 700px) {
+  .wrapper {
+    margin: 50px auto; /* Adjusted margin for smaller screens */
+  }
+}
+
+.wrapper .box {
+  width: 100%; /* Adjusted width to fit grid */
+  position: relative;
+  perspective: 1000px;
+}
+
+.wrapper .box .front-face {
+  background: #181818;
+  box-shadow: 5px 5px 2px #0b0b0b, -5px -5px 2px #252525;
+  height: 220px;
+  border-radius: 2rem;
+  border: 2.5px solid rgba(0, 0, 0, 0.08);
+  display: flex;
+  padding: 40px 80px; /* Adjusted padding for better alignment */
+  flex-direction: column;
+  justify-content: center;
+  transition: all 0.45s ease;
+}
+
+
+.box .front-face .icon {
+  align-items: center;
+  height: 80px;
+}
+
+.box .front-face .icon i {
+  font-size: 65px;
+}
+
+.box .front-face span,
+.box .back-face span {
+  font-size: 24px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.box .front-face .icon i,
+.box .front-face span {
+  background: linear-gradient(-90deg, #00ff93, #c850c0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.box .back-face {
+  position: absolute;
+  border-radius: 2rem;
+  z-index: 1;
+  height: 220px;
+  width: 75%;
+  padding: 45px;
+  color: #fff;
+  opacity: 0;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  background: linear-gradient(145deg, #0b0b0b, #4b00b2);
+  transform: translateY(110px) rotateX(-90deg);
+  box-shadow: 6px 6px 4px rgba(0, 0, 0, 0.301), -6px -6px 4px rgba(0, 0, 0, 0.301);
+  transition: all 0.45s ease;
+}
+
+.box .back-face p {
+  margin-top: 10px;
+  text-align: justify;
+}
+
+.box:hover .back-face {
+  opacity: 1;
+  transform: rotateX(0deg);
+}
+
+.box:hover .front-face {
+  opacity: 0;
+  transform: translateY(-110px) rotateX(90deg);
+}

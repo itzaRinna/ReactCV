@@ -47,11 +47,11 @@ function App() {
               <a href="clock.html">Time?</a>
             </div>
             {/* Decoration */}
-            <div className="decoration-wrapper">
+            {/* <div className="decoration-wrapper">
               <div className="eye">
                 <img src={deco} alt="decoration" />
               </div>
-            </div> 
+            </div>  */}
           </div>
         </nav>
         {/* Logo */}
@@ -107,10 +107,10 @@ function App() {
               <div className="icon">
                 <i className="fas fa-code"></i>
               </div>
-              <span>Web Design</span>
+              <span>Web Dev</span>
             </div>
             <div className="back-face">
-              <span>Web Design</span>
+              <span>Web Dev</span>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem in deleniti vitae beatae veritatis aliquid porro perspiciatis dolores impedit ad.
               </p>
@@ -121,10 +121,10 @@ function App() {
               <div className="icon">
                 <i className="fas fa-chart-line"></i>
               </div>
-              <span>Advertising</span>
+              <span>Software</span>
             </div>
             <div className="back-face">
-              <span>Advertising</span>
+              <span>Software</span>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem in deleniti vitae beatae veritatis aliquid porro perspiciatis dolores impedit ad.
               </p>
@@ -135,10 +135,10 @@ function App() {
               <div className="icon">
                 <i className="fas fa-rocket"></i>
               </div>
-              <span>Game Design</span>
+              <span>Game Dev</span>
             </div>
             <div className="back-face">
-              <span>Game Design</span>
+              <span>Game Dev</span>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem in deleniti vitae beatae veritatis aliquid porro perspiciatis dolores impedit ad.
               </p>

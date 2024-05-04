@@ -69,6 +69,7 @@ function App() {
             <div className="scroll">
               <h2 className="read-me"><span></span> Developer</h2>
               <div className="heart-icon" onClick={playAudio}>
+                {/* Plays audio */}
                 <audio ref={audioRef} id="myAudio" src={track} />
                 <button type="button">
                   <i>

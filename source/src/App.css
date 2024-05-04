@@ -1,5 +1,7 @@
 @import url(./arc_reactor.css);
 @import url(./navbar.css);
+@import url(./boxes.css);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css);
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -120,7 +122,7 @@
     content: "Webs";
   }
 }
-.start .scroll a {
+.start .scroll .heart-icon {
   position: relative;
   align-self: flex-end;
   text-decoration: none;
@@ -128,18 +130,18 @@
   left: 0;
   transition: all 0.3s ease-in-out;
 }
-.start .scroll a:hover {
+.start .scroll .heart-icon:hover {
   bottom: 18px;
   left: 18px;
 }
-.start .scroll button {
+.start .scroll .heart-icon button {
   background-color: transparent;
   background-repeat: no-repeat;
   border: none;
   cursor: pointer;
   overflow: hidden;
 }
-.start .scroll button i {
+.start .scroll .heart-icon button i {
   color: #c850c0;
 }
 

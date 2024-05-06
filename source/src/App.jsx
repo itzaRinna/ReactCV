@@ -7,6 +7,11 @@ import { far } from '@fortawesome/free-regular-svg-icons';
 import hand from './assets/media-assets/robothand.png'; // Import the hand image
 import cls from './assets/media-assets/close.png';
 import deco from './assets/media-assets/deco.png';
+import discord from './assets/media-assets/main/discord.png';
+import fb from './assets/media-assets/main/facebook.png';
+import github from './assets/media-assets/main/github.png';
+import linkedin from './assets/media-assets/main/linkedin.png';
+import youtube from './assets/media-assets/main/youtube.png';
 import track from './assets/media-assets/soundtracks/main.mp3'
 import './App.css';
 
@@ -154,60 +159,105 @@ function App() {
             </div>
           </div>
         </div>
-        <div class="skills">
-          <div class="title">
-            <h2 class="gradient-text">Skills</h2>
+        <div className="skills">
+          <div className="title">
+            <h2 className="gradient-text">Skills</h2>
           </div>
-          <div class="skill-bars">
-            <div class="bar">
-              <div class="info">
-                <i class="fab fa-html5"></i> 
+          <div className="skill-bars">
+            <div className="bar">
+              <div className="info">
+                <i className="fab fa-html5"></i> 
                 <span>HTML</span>
               </div>
-              <div class="progress-line html">
+              <div className="progress-line html">
                 <span></span>
               </div>
             </div>
-            <div class="bar">
-              <div class="info">
-                <i class="fab fa-css3-alt"></i> 
+            <div className="bar">
+              <div className="info">
+                <i className="fab fa-css3-alt"></i> 
                 <span>CSS</span>
               </div>
-              <div class="progress-line css">
+              <div className="progress-line css">
                 <span></span>
               </div>
             </div>
-            <div class="bar">
-              <div class="info">
-                <i class="fab fa-js"></i> 
+            <div className="bar">
+              <div className="info">
+                <i className="fab fa-js"></i> 
                 <span>jQuery</span>
               </div>
-              <div class="progress-line jquery">
+              <div className="progress-line jquery">
                 <span></span>
               </div>
             </div>
-            <div class="bar">
-              <div class="info">
-                <i class="fab fa-python"></i> 
+            <div className="bar">
+              <div className="info">
+                <i className="fab fa-python"></i> 
                 <span>Python</span>
               </div>
-              <div class="progress-line python">
+              <div className="progress-line python">
                 <span></span>
               </div>
             </div>
-            <div class="bar">
-              <div class="info">
-                <i class="fas fa-database"></i> 
+            <div className="bar">
+              <div className="info">
+                <i className="fas fa-database"></i> 
                 <span>MySQL</span>
               </div>
-              <div class="progress-line mysql">
+              <div className="progress-line mysql">
                 <span></span>
               </div>
             </div>
           </div>
         </div>
+        <div className="work-container">
+          <div className="title">
+            <h2 className="gradient-text">Work</h2>
+          </div>
+          <div className="work">
+            <div className="work-item">
+              <img src="https://via.placeholder.com/400" alt="Work 1"/>
+              <div className="work-item-content">
+                <h3>Work Title 1</h3>
+                <p>Description of work 1 goes here.</p>
+              </div>
+            </div>
+            <div className="work-item">
+              <img src="https://via.placeholder.com/400" alt="Work 2"/>
+              <div className="work-item-content">
+                <h3>Work Title 2</h3>
+                <p>Description of work 2 goes here.</p>
+              </div>
+            
+            </div>
+
+          </div>
+        </div>
 
       </section>
+
+      <footer>
+        <h1>Feel free to contact me!</h1>
+        <div class="social">
+          <div class="social-icon">
+            <a href="#"><img src={github}/></a>
+          </div>
+          <div class="social-icon">
+            <a href="#"><img src={youtube}/></a>
+          </div>
+          <div class="social-icon">
+            <a href="#"><img src={fb}/></a>
+          </div>
+          <div class="social-icon">
+            <a href="#"><img src={linkedin}/></a>
+          </div>
+          <div class="social-icon">
+            <a href="#"><img src={discord}/></a>
+          </div>
+        </div>
+        <p>@Copyright 2022 by <span class="gradient-text">CyZer0</span><img src="./assets/media-assets/CyZerO.webp"/></p>
+      </footer>
     </>
   );
 }

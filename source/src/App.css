@@ -148,7 +148,7 @@ body{
   cursor: pointer;
   overflow: hidden;
 }
-.start .scroll .heart-icon button i {
+.start .main-container .scroll .heart-icon button i{
   color: #c850c0;
 }
 

@@ -12,27 +12,13 @@ import fb from './assets/media-assets/main/facebook.png';
 import github from './assets/media-assets/main/github.png';
 import linkedin from './assets/media-assets/main/linkedin.png';
 import youtube from './assets/media-assets/main/youtube.png';
-import track from './assets/media-assets/soundtracks/main.mp3'
+import track from './assets/media-assets/soundtracks/main.mp3';
 import './App.css';
 
 library.add(fab, fas, far);
 
-function App() {
-  // Set up event listeners and functionality using useEffect
-  useEffect(() => {
-    // No need to call Script1 and Script2 here
-    // They will be automatically invoked when the component mounts
-  }, []);
-
-  const openNav = () => {
-    document.getElementById("mySidenav").style.width = "100%";
-  };
-
-  const closeNav = () => {
-    document.getElementById("mySidenav").style.width = "0";
-  };
-
-  const audioRef = useRef(null);
+const App: React.FC = () => {
+  const audioRef = useRef<HTMLAudioElement>(null);
 
   const playAudio = () => {
     if (audioRef.current) {
@@ -40,17 +26,22 @@ function App() {
     }
   };
 
+  const openNav = () => {
+    document.getElementById("mySidenav")!.style.width = "100%";
+  };
+
+  const closeNav = () => {
+    document.getElementById("mySidenav")!.style.width = "0";
+  };
+
   return (
     <>
       <section className="start">
-        {/* Navigation */}
         <nav id="mySidenav" className="sidenav">
-          {/* Close button */}
           <a href="#" className="closebtn" onClick={closeNav}>
             <img src={cls} alt="close menu" />
-          </a> 
+          </a>
           <div className="align-row">
-            {/* Navigation links */}
             <div className="nav-wrapper">
               <a href="index.html">Work</a>
               <a href="#">MyCV</a>
@@ -58,21 +49,13 @@ function App() {
               <a href="#">About</a>
               <a href="clock.html">Time?</a>
             </div>
-            {/* Decoration */}
-            {/* <div className="decoration-wrapper">
-              <div className="eye">
-                <img src={deco} alt="decoration" />
-              </div>
-            </div>  */}
           </div>
         </nav>
-        {/* Logo */}
         <div className="logo" onClick={openNav}>
           <div className="trap" id="trap1"></div>
           <div className="trap" id="trap2"></div>
           <div className="trap" id="trap3"></div>
         </div>
-        {/* Main content */}
         <div className="main-container">
           <div className="herotxt">
             <div className="slide">
@@ -81,17 +64,13 @@ function App() {
             <div className="scroll">
               <h2 className="read-me"><span></span> Developer</h2>
               <div className="heart-icon" onClick={playAudio}>
-                {/* Plays audio */}
                 <audio ref={audioRef} id="myAudio" src={track} />
                 <button type="button">
-                  <i>
-                    <svg xmlns="http://www.w3.org/2000/svg" width={48} height={48} viewBox="0 0 24 24"><path fill="currentColor" d="m12 21.35l-1.45-1.32C5.4 15.36 2 12.27 2 8.5C2 5.41 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.08C13.09 3.81 14.76 3 16.5 3C19.58 3 22 5.41 22 8.5c0 3.77-3.4 6.86-8.55 11.53z"></path></svg>
-                  </i>
+                  <FontAwesomeIcon icon={['fas', 'heart']} size="2x" />
                 </button>
               </div>
             </div>
           </div>
-          {/* Hero image */}
           <div className="outer-heropic-container">
             <div className="inner-heropic-container">
               <div className="reactor-container">
@@ -105,7 +84,7 @@ function App() {
                 <div className="circle-7"><span></span><span></span><span></span></div>
               </div>
             </div>
-            <img src={hand} alt="hand" /> {/* Use the imported image directly */}
+            <img src={hand} alt="hand" />
           </div>
         </div>
       </section>
@@ -118,43 +97,37 @@ function App() {
             <div className="box">
               <div className="front-face">
                 <div className="icon">
-                  <i className="fas fa-code"></i>
+                  <FontAwesomeIcon icon={['fas', 'code']} />
                 </div>
                 <span>Web Dev</span>
               </div>
               <div className="back-face">
                 <span>Web Dev</span>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem in deleniti vitae beatae veritatis aliquid porro perspiciatis dolores impedit ad.
-                </p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem in deleniti vitae beatae veritatis aliquid porro perspiciatis dolores impedit ad.</p>
               </div>
             </div>
             <div className="box">
               <div className="front-face">
                 <div className="icon">
-                  <i className="fas fa-chart-line"></i>
+                  <FontAwesomeIcon icon={['fas', 'chart-line']} />
                 </div>
                 <span>Software</span>
               </div>
               <div className="back-face">
                 <span>Software</span>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem in deleniti vitae beatae veritatis aliquid porro perspiciatis dolores impedit ad.
-                </p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem in deleniti vitae beatae veritatis aliquid porro perspiciatis dolores impedit ad.</p>
               </div>
             </div>
             <div className="box">
               <div className="front-face">
                 <div className="icon">
-                  <i className="fas fa-rocket"></i>
+                  <FontAwesomeIcon icon={['fas', 'rocket']} />
                 </div>
                 <span>Game Dev</span>
               </div>
               <div className="back-face">
                 <span>Game Dev</span>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem in deleniti vitae beatae veritatis aliquid porro perspiciatis dolores impedit ad.
-                </p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem in deleniti vitae beatae veritatis aliquid porro perspiciatis dolores impedit ad.</p>
               </div>
             </div>
           </div>
@@ -166,7 +139,7 @@ function App() {
           <div className="skill-bars">
             <div className="bar">
               <div className="info">
-                <i className="fab fa-html5"></i> 
+                <FontAwesomeIcon icon={['fab', 'html5']} />
                 <span>HTML</span>
               </div>
               <div className="progress-line html">
@@ -175,7 +148,7 @@ function App() {
             </div>
             <div className="bar">
               <div className="info">
-                <i className="fab fa-css3-alt"></i> 
+                <FontAwesomeIcon icon={['fab', 'css3-alt']} />
                 <span>CSS</span>
               </div>
               <div className="progress-line css">
@@ -184,16 +157,16 @@ function App() {
             </div>
             <div className="bar">
               <div className="info">
-                <i className="fab fa-js"></i> 
-                <span>jQuery</span>
+                <FontAwesomeIcon icon={['fab', 'js']} />
+                <span>JavaScript</span>
               </div>
-              <div className="progress-line jquery">
+              <div className="progress-line js">
                 <span></span>
               </div>
             </div>
             <div className="bar">
               <div className="info">
-                <i className="fab fa-python"></i> 
+                <FontAwesomeIcon icon={['fab', 'python']} />
                 <span>Python</span>
               </div>
               <div className="progress-line python">
@@ -202,7 +175,7 @@ function App() {
             </div>
             <div className="bar">
               <div className="info">
-                <i className="fas fa-database"></i> 
+                <FontAwesomeIcon icon={['fas', 'database']} />
                 <span>MySQL</span>
               </div>
               <div className="progress-line mysql">
@@ -217,46 +190,42 @@ function App() {
           </div>
           <div className="work">
             <div className="work-item">
-              <img src="https://via.placeholder.com/400" alt="Work 1"/>
+              <img src="https://via.placeholder.com/400" alt="Work 1" />
               <div className="work-item-content">
                 <h3>Work Title 1</h3>
                 <p>Description of work 1 goes here.</p>
               </div>
             </div>
             <div className="work-item">
-              <img src="https://via.placeholder.com/400" alt="Work 2"/>
+              <img src="https://via.placeholder.com/400" alt="Work 2" />
               <div className="work-item-content">
                 <h3>Work Title 2</h3>
                 <p>Description of work 2 goes here.</p>
               </div>
-            
             </div>
-
           </div>
         </div>
-
       </section>
-
       <footer>
         <h1>Feel free to contact me!</h1>
-        <div class="social">
-          <div class="social-icon">
-            <a href="#"><img src={github}/></a>
+        <div className="social">
+          <div className="social-icon">
+            <a href="#"><img src={github} alt="GitHub" /></a>
           </div>
-          <div class="social-icon">
-            <a href="#"><img src={youtube}/></a>
+          <div className="social-icon">
+            <a href="#"><img src={youtube} alt="YouTube" /></a>
           </div>
-          <div class="social-icon">
-            <a href="#"><img src={fb}/></a>
+          <div className="social-icon">
+            <a href="#"><img src={fb} alt="Facebook" /></a>
           </div>
-          <div class="social-icon">
-            <a href="#"><img src={linkedin}/></a>
+          <div className="social-icon">
+            <a href="#"><img src={linkedin} alt="LinkedIn" /></a>
           </div>
-          <div class="social-icon">
-            <a href="#"><img src={discord}/></a>
+          <div className="social-icon">
+            <a href="#"><img src={discord} alt="Discord" /></a>
           </div>
         </div>
-        <p>@Copyright 2022 by <span class="gradient-text">CyZer0</span><img src="./assets/media-assets/CyZerO.webp"/></p>
+        <p>&copy; 2022 by <span className="gradient-text">CyZer0</span> <img src="./assets/media-assets/CyZerO.webp" alt="CyZerO logo" /></p>
       </footer>
     </>
   );

@@ -12,20 +12,11 @@ import fb from './assets/media-assets/main/facebook.png';
 import github from './assets/media-assets/main/github.png';
 import linkedin from './assets/media-assets/main/linkedin.png';
 import youtube from './assets/media-assets/main/youtube.png';
-import track from './assets/media-assets/soundtracks/main.mp3';
 import './App.css';
 
 library.add(fab, fas, far);
 
 const App: React.FC = () => {
-  const audioRef = useRef<HTMLAudioElement>(null);
-
-  const playAudio = () => {
-    if (audioRef.current) {
-      audioRef.current.play();
-    }
-  };
-
   const openNav = () => {
     document.getElementById("mySidenav")!.style.width = "100%";
   };
@@ -36,7 +27,7 @@ const App: React.FC = () => {
 
   return (
     <>
-      <section className="start">
+      <header className="start">
         <nav id="mySidenav" className="sidenav">
           <a href="#" className="closebtn" onClick={closeNav}>
             <img src={cls} alt="close menu" />
@@ -56,19 +47,15 @@ const App: React.FC = () => {
           <div className="trap" id="trap2"></div>
           <div className="trap" id="trap3"></div>
         </div>
+
+
         <div className="main-container">
           <div className="herotxt">
-            <div className="slide">
-              <h1 className="gradient-text">Rinna</h1>
+            <div className="heading">
+              <h1><span className="gradient-text">Rinna </span><span className="white-text">Ateros</span></h1>
             </div>
             <div className="scroll">
               <h2 className="read-me"><span></span> Developer</h2>
-              <div className="heart-icon" onClick={playAudio}>
-                <audio ref={audioRef} id="myAudio" src={track} />
-                <button type="button">
-                  <FontAwesomeIcon icon={['fas', 'heart']} size="2x" />
-                </button>
-              </div>
             </div>
           </div>
           <div className="outer-heropic-container">
@@ -87,7 +74,9 @@ const App: React.FC = () => {
             <img src={hand} alt="hand" />
           </div>
         </div>
-      </section>
+
+
+      </header>
       <section className="body">
         <div className='services'>
           <div className="title">
@@ -225,7 +214,6 @@ const App: React.FC = () => {
             <a href="#"><img src={discord} alt="Discord" /></a>
           </div>
         </div>
-        <p>&copy; 2022 by <span className="gradient-text">CyZer0</span> <img src="./assets/media-assets/CyZerO.webp" alt="CyZerO logo" /></p>
       </footer>
     </>
   );
